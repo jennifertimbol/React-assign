@@ -12,14 +12,13 @@ class Bootcamp{
         this.level = level;
         this.students = students;
     }
-    // if (students === undefined) {
-    //     students = [];
-    // }
     registerStudent(studentToRegister) {
-        let allStudents = students.filter(student => student.email === 0); {
-            students.push(studentToRegister);
+        let allStudents = this.students.filter(student => student.email === studentToRegister.email);
+        console.log("all students for add",allStudents)
+        if(allStudents.length === 0) {
+            this.students.push(studentToRegister);
         }
-        console.log(`Registering ${Student.email} to the bootcamp Web Dev Fundamentals.`);
-        return students;
+        console.log(`Registering ${studentToRegister.email} to the bootcamp Web Dev Fundamentals.`);
+        return this.students;
     }
 }
