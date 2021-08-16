@@ -15,9 +15,9 @@ class Bootcamp{
     // if (students === undefined) {
     //     students = [];
     // }
-    registerStudent(student) {
-        let newStudent = students.email.filter(student => student.email === 0); {
-            students.push(newStudent);
+    registerStudent(studentToRegister) {
+        let allStudents = students.filter(student => student.email === 0); {
+            students.push(studentToRegister);
         }
         console.log(`Registering ${Student.email} to the bootcamp Web Dev Fundamentals.`);
         return students;
